@@ -1,0 +1,46 @@
+body {
+    background-color: #f9f9f9;
+}
+
+/*header*/
+header {
+    background-color: #fff9f9;
+    width: 100% - 60px;
+    height: 100px;
+    padding: 0 30px;
+    display: grid; /* jakaa headerin kahteen osaan, jotta saan logon ja linkit samalle riville */
+    grid-template-columns: 1fr auto;
+    line-height: 100px; /* keskittää tekstin, jos linehight = height*/
+}
+
+header p {
+    font-size: 34px;
+}
+
+header nav ul {
+    text-align: right
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+header nav ul li a {
+    font-size: 22px;
+}
+
+div.content {
+    width: 100% - 200px;
+    padding: 0 100px 50px 100px;
+}
+
+/*footer*/
+footer {
+    background-color: #aaaaaa;
+    width: 100% - 40px;
+    height: 60px;
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 16px;
+}
