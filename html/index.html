@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway" rel="stylesheet"> 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Susanna's Portfolio</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script> <!-- jquery -->
+        
 </head>
 <body>
 <!-- tarkotus olis tehä semne yhel sivul oleva juttu. blogi tulee sit eriksee -->
@@ -13,12 +19,16 @@
         <p>Susanna's portfolio</p>
         <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Projects</a></li>
                     <li><a href="">Contact</a></li>
                 </ul></nav>
     </header>
+
+    <div id="promo-imgs">
+        <!-- vaihtuvaa kuvaa yay -->
+    </div>
         
     <div class="content" id="home">
         <p>tänne tulee jotai tittelityytä tästä sivusta.</p>
@@ -42,6 +52,36 @@
     <footer>
         <p>kai sit tän tulee kaik copyrightjutut yms</p>
     </footer>
+
+    <script>
+        $(document).ready(() => {
+            /* get time
+            aina kun on kulunut x sekuntia, vaihda divin 
+            bg image */
+            let imgID = 0;
+            
+            let urlArray = [
+                "url(../img/ahri.jpg)",
+                "url(../img/jinx.jpg)",
+                "url(../img/neeko.jpg)"
+            ]
+            
+            setTimeout(function() {
+                    $("#promo-imgs").css({"background-image": urlArray[1]});
+                    // 3000 for 3 seconds
+                    console.log("jee");
+                }, 2000)
+
+            setTimeout(function() {
+                $("#promo-imgs").css({"background-image": urlArray[2]});
+                // 3000 for 3 seconds
+                console.log("jee");
+            }, 2000)
+
+            /*urlArray.forEach(myFunc);*/
+            
+        });
+    </script>
 
 </body>
 </html>
