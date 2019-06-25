@@ -1,54 +1,48 @@
 body {
     background-color: #f9f9f9;
+    font-size: 30px;
 }
 
 /*header*/
 header {
-    background-color: #fff9f9;
-    width: 100% - 60px;
-    height: 50px;
-    padding: 0 30px;
-    display: grid; /* jakaa headerin kahteen osaan, jotta saan logon ja linkit samalle riville */
-    grid-template-columns: 1fr auto;
-    line-height: 100px; /* keskittää tekstin, jos linehight = height*/
-    transition: 0.4s;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-wrap: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header p {
-    font-family: 'Indie Flower', cursive;
-    font-size: 40px;
-    color: #de776e;
-    text-shadow: 2px 2px #b0aead;
+#logo {
+  font-family: arial;
+  margin: 10px;
 }
 
-header nav ul {
-    text-align: right;
+header ul {
+  margin: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-header nav ul li {
-    display: inline-block;
-    list-style: none;
-    padding-right: 12px;
-}
-
-header nav ul li a {
-    font-family: 'Raleway', sans-serif;
-    font-size: 28px;
-    color: #5d5d5d;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-header nav ul li a:hover, a:active {
-    color: #ff7484;
-    text-decoration: underline;
+header ul li {
+  margin: 10px;
+  font-family: arial;
 }
 
 /* changing images */
 #promo-imgs {
     width: 100%;
     height: 600px;
-    padding-top: 60px;
+    padding-top: 110px; /* tämä, koska headerilla on fixed position -> */
+     /* mahdollista pienentää header scrollatessa */
     padding-bottom: 30px;
 }
 
@@ -63,12 +57,21 @@ header nav ul li a:hover, a:active {
 }
 
 /* main content */
-div.content {
+.content {
     width: 100% - 400px;
     padding: 20px 200px 30px 200px;
-    font-size: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-family: arial;
     color: #1f1f1f;
+}
+
+/* use flexbox to get text aside of pictures */
+.content-images {
+
+}
+
+.content-text {
+
 }
 
 /*footer*/
